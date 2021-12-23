@@ -1,0 +1,102 @@
+.advantages {
+  padding-bottom: 97px;
+  background-color: getColor('primaryBgc');
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 139px;
+  }
+}
+.advantages__set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: -60px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: -90px;
+  }
+}
+.advantages__item {
+  display: inline-block;
+  max-width: 230px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 60px);
+    max-width: 180px;
+    margin-left: 60px;
+  }
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc(100% / 3 - 90px);
+    max-width: 330px;
+    margin-left: 90px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url(../images/advantages/dug-glass@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/dug-glass@2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/advantages/dug-glass@3x.png);
+    }
+  }
+  &:nth-child(2)::before {
+    background-image: url(../images/advantages/apple-glass@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/apple-glass@2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/advantages/apple-glass@3x.png);
+    }
+  }
+  &:nth-child(3)::before {
+    background-image: url(../images/advantages/heart-candy@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/advantages/heart-candy@2x.png);
+    }
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/advantages/heart-candy@3x.png);
+    }
+  }
+}
+.advantages__number {
+  display: block;
+  margin-bottom: 20px;
+  font-family: Titan One, cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: getColor('titleText');
+}
+.advantages__text {
+  display: block;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: getColor('additionalText');
+}
